@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Final Project</title>
+    <link rel="stylesheet" href="FinalProject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <!-- <nav class="logo"> -->
+              <a href="index.html">
+                <img class="logo" src="Logo.jpg" alt="MyLogo">
+            </a>
+            
+
+            <div class="input-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+                <button class="button">Search</button>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="banner-area">
+        <!-- <h2>banner</h2> -->
+    </div><br>
+    <br>
+    <br><br><br><br><br><br><br><br>
+    <section class="aintro">
+        <div class="intro">
+            <video class="intro-video" src="Introvideo.mp4" muted="" autoplay="" loop="" width="840px">
+            </video>
+    </div>
+</section>
+
+
+    
+
+
+    <div class="container">
+
+        <!-- <h1> New York</h1> -->
+
+    <div class="video-container">
+        <div class="video">
+            <video src="NewYork.mp4" muted></video>
+        </div>
+    </div>
+    <div class="popup-video">
+        <span>&times;</span>
+        <video src="NewYork.mp4" muted autoplay controls></video>
+    </div>
+    <div class="sum">
+        <h1> New York, New York</h1><br>
+        <p>Welcome to New York<br>
+            Located in the northeast of the United States<br>
+            Population: 8.468 million<br>
+
+        </p>
+    </div>
+
+    </div>
+    <div class="container">
+
+    <div class="video-container">
+        <div class="video">
+            <video src="Portland.mp4" muted></video>
+        </div>
+    </div>
+    <div class="popup-video">
+        <span>&times;</span>
+        <video src="Portland.mp4" muted autoplay controls></video>
+    </div>
+    <div class="sum">
+        <h1> Portland, Oregon</h1><br>
+        <p>Welcome to Portland<br>
+            Located in the pacific northwest of the United States<br>
+            Population: 641162<br>
+
+        </p>
+    </div>
+
+    </div>
+
+
+    
+
+    <script>
+// video-player        
+        document.querySelectorAll('.video-container video').forEach(vid =>{
+            vid.onclick = () =>{
+                document.querySelector('.popup-video').style.display = 'block';
+                document.querySelector('.popup-video video').src = vid.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-video span').onclick = () =>{
+            document.querySelector('.popup-video').style.display = 'none';
+        }
+
+// search-button
+        const button = document.querySelector("button");
+
+        button.addEventListener("mousedown", () => button.classList.add("clicked"));
+        button.addEventListener("mouseup", () => button.classList.remove("clicked"));
+    </script>
+    
+</body>
+<footer class="footer">
+    <div style="width:30%;">
+        <div style="font-size:1.5em">
+            <a href="signup.html" class="button6" style="background-color:rgb(5, 185, 128);">Sign Up To Stay Updated</a>
+            </div>
+      </div>
+      <div style="width:35%; ">
+        <div style="font-size:1.5em">
+            <a href="suggestion.html" class="button5" style="background-color:rgb(0, 187, 255);">Click Here To Suggest a Destination</a>
+            </div>
+      </div>
+      <div style="width:40%;">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-google"></a>
+      </div>
+    
+</footer>
+</html>
